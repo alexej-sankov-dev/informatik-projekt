@@ -1,0 +1,35 @@
+1	Berlin	          3.644.826	
+2	Hamburg	          1.841.179	
+3	Muenchen	          1.471.508	
+4	Koeln	          1.085.664	
+5	Frankfurt am Main	          753.056	
+6	Stuttgart	634.830	
+7	Duesseldorf	619.294	
+8	Leipzig	        587.857		
+9	Dortmund	587.010	
+10	Essen	        583.109	
+11	Bremen	        569.352	
+12	Dresden	        554.649	
+13	Hannover	538.068	
+14	Nuernberg	518.365	
+15	Duisburg	498.590	
+16	Bochum	        364.628		
+17	Wuppertal	354.382	
+18	Bielefeld	333.786	
+19	Bonn	        327.258	
+20	Muenster	          314.319	
+21	Karlsruhe	313.092	
+22	Mannheim	309.370	
+23	Augsburg	295.135	
+24	Wiesbaden	278.342	
+25	Moenchengladbach	261.454	
+26	Gelsenkirchen	260.654	
+27	Braunschweig	248.292	
+28	Kiel	        247.548		
+29	Aachen	        247.380	
+30	Chemnitz	247.237	
+31	Halle (Saale)	239.257	
+32	Magdeburg	238.697	
+33	Freiburg im Breisgau	230.241	
+34	Krefeld	        227.020	
+35	Luebeck	        217.198	
