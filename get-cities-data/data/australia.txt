@@ -1,0 +1,5 @@
+1 	Sydney 	Australien 	4.505.341 	2015[1]
+2 	Melbourne 	Australien 	4.203.416 	2015[1]
+3 	Brisbane 	Australien 	2.201.930 	2015[1]
+4 	Perth 	Australien 	1.861.108 	2015[1]
+5 	Auckland 	Neuseeland 	1.344.304 	2015[1]

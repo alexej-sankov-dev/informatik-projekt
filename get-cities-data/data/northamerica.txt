@@ -1,0 +1,46 @@
+1. 	Mexiko-Stadt 	Mexiko 	8.555.272 	2010 	20.116.842 	2010
+2. 	New York City 	Vereinigte Staaten 	8.550.405 	2015 	20.182.305 	2015
+3. 	Los Angeles 	Vereinigte Staaten 	3.971.883 	2015 	13.340.068 	2015
+4. 	Chicago 	Vereinigte Staaten 	2.720.546 	2015 	9.551.031 	2015
+5. 	Toronto 	Kanada 	2.615.060 	2011 	5.941.488 	2012
+6. 	Santo Domingo 	Dominikanische Republik 	2.581.827 	2010 	3.813.214 	2010
+7. 	Houston 	Vereinigte Staaten 	2.296.224 	2015 	6.656.947 	2015
+8. 	Havanna 	Kuba 	2.121.871 	2014 	2.121.871 	2014
+9. 	Montreal 	Kanada 	1.698.062 	2014 	4.027.100 	2014
+10. 	Guadalajara 	Mexiko 	1.600.894 	2011 	4.434.878 	2010
+11. 	Philadelphia 	Vereinigte Staaten 	1.567.442 	2015 	6.069.875 	2015
+12. 	Phoenix 	Vereinigte Staaten 	1.563.025 	2015 	4.574.531 	2015
+13. 	San Antonio 	Vereinigte Staaten 	1.469.845 	2015 	2.384.075 	2015
+14. 	Puebla 	Mexiko 	1.434.062 	2010 	2.668.437 	2010
+15. 	San Diego 	Vereinigte Staaten 	1.394.928 	2015 	3.299.521 	2015
+16. 	Dallas 	Vereinigte Staaten 	1.300.092 	2015 	7.102.796 	2015
+17. 	Monterrey 	Mexiko 	1.135.550 	2010 	4.089.962 	2010
+18. 	Managua 	Nicaragua 	1.028.808 	2012 	2.100.000 	2005
+19. 	Guatemala-Stadt 	Guatemala 	1.010.253 	2006 	2.944.065 	2006
+20. 	Austin 	Vereinigte Staaten 	931.830 	2015 	2.000.860 	2015
+21. 	Port-au-Prince 	Haiti 	875.978 	2009 	2.296.386 	2009
+22. 	San Francisco 	Vereinigte Staaten 	864.816 	2015 	4.656.132 	2015
+23. 	Columbus 	Vereinigte Staaten 	850.106 	2015 	2.021.632 	2015
+24. 	Charlotte 	Vereinigte Staaten 	827.097 	2015 	2.426.363 	2015
+25. 	Seattle 	Vereinigte Staaten 	684.451 	2015 	3.733.580 	2015
+26. 	Denver 	Vereinigte Staaten 	682.545 	2015 	2.814.330 	2015
+27. 	Detroit 	Vereinigte Staaten 	677.116 	2015 	4.302.043 	2015
+28. 	Washington D.C. 	Vereinigte Staaten 	672.228 	2015 	6.097.684 	2015
+29. 	Boston 	Vereinigte Staaten 	667.137 	2015 	4.774.321 	2015
+30. 	Portland 	Vereinigte Staaten 	632.309 	2015 	2.389.228 	2015
+31. 	Las Vegas 	Vereinigte Staaten 	623.747 	2015 	2.114.801 	2015
+32. 	Baltimore 	Vereinigte Staaten 	621.849 	2015 	2.797.407 	2015
+33. 	Vancouver 	Kanada 	603.502 	2011 	2.464.000 	2012
+34. 	Sacramento 	Vereinigte Staaten 	490.712 	2015 	2.274.194 	2015
+35. 	Kansas City 	Vereinigte Staaten 	475.378 	2015 	2.087.471 	2015
+36. 	Atlanta 	Vereinigte Staaten 	463.878 	2015 	5.710.795 	2015
+37. 	Miami 	Vereinigte Staaten 	441.003 	2015 	6.012.331 	2015
+38. 	Minneapolis 	Vereinigte Staaten 	410.939 	2015 	3.524.583 	2015
+39. 	Cleveland 	Vereinigte Staaten 	388.072 	2015 	2.060.810 	2015
+40. 	San Juan 	Puerto Rico 	381.931 	2010 	2.315.683 	2012
+41. 	Tampa 	Vereinigte Staaten 	369.075 	2015 	2.975.225 	2015
+42. 	Riverside 	Vereinigte Staaten 	322.424 	2015 	4.489.159 	2015
+43. 	St. Louis 	Vereinigte Staaten 	315.685 	2015 	2.811.588 	2015
+44. 	Pittsburgh 	Vereinigte Staaten 	304.391 	2015 	2.353.045 	2015
+45. 	Cincinnati 	Vereinigte Staaten 	298.550 	2015 	2.157.719 	2015
+46. 	Orlando 	Vereinigte Staaten 	270.934 	2015 	2.387.138 	2015

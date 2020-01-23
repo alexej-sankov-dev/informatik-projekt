@@ -1,0 +1,30 @@
+1 	Kairo 	Aegypten 	20.485.000 	2019[1] 	Schaetzung
+2 	Lagos 	Nigeria 	13.904.000 	2019[2] 	Schaetzung
+3 	Kinshasa 	Demokratische Republik Kongo 	13.743.000 	2019[3] 	Schaetzung
+4 	Luanda 	Angola 	6.542.944 	2014[4] 	Zensus
+5 	Khartum 	Sudan 	5.274.321 	2008[5] 	Zensus
+6 	Alexandria 	Aegypten 	5.163.750 	2017[6] 	Zensus
+7 	Abidjan 	Elfenbeinkueste 	4.707.404 	2014[7] 	Zensus
+8 	Johannesburg 	Suedafrika 	4.424.827 	2011[8] 	Zensus
+9 	Addis Abeba 	Aethiopien 	4.400.000 	2018[9] 	Schaetzung
+10 	Nairobi 	Kenia 	4.397.073 	2019[10] 	Zensus
+11 	Daressalam 	Tansania 	4.364.541 	2012[11] 	Zensus
+12 	Kano 	Nigeria 	3.906.000 	2019[2] 	Schaetzung
+13 	Kapstadt 	Suedafrika 	3.740.026 	2011[8] 	Zensus
+14 	Douala 	Kamerun 	3.656.000 	2018[12] 	Schaetzung
+15 	Casablanca 	Marokko 	3.615.903 	2014[13] 	Zensus
+16 	Dakar 	Senegal 	3.520.000 	2015[14] 	Schaetzung
+17 	Ibadan 	Nigeria 	3.464.000 	2019[2] 	Schaetzung
+18 	Thekwini 	Suedafrika 	3.442.361 	2011[8] 	Zensus
+19 	Yaounde 	Kamerun 	3.412.000 	2018[12] 	Schaetzung
+20 	Ekurhuleni 	Suedafrika 	3.178.470 	2011[8] 	Zensus
+21 	Abuja 	Nigeria 	3.095.000 	2019[2] 	Schaetzung
+22 	Maputo 	Mosambik 	2.947.967 	2017[15] 	Zensus
+23 	Algier 	Algerien 	2.947.461 	2008[16] 	Zensus
+24 	Tshwane 	Suedafrika 	2.921.488 	2011[8] 	Zensus
+25 	Port Harcourt 	Nigeria 	2.873.000 	2019[2] 	Schaetzung
+26 	Ouagadougou 	Burkina Faso 	2.741.000 	2015[17] 	Schaetzung
+27 	Antananarivo 	Madagaskar 	2.610.000 	2015[18] 	Schaetzung
+28 	Kumasi 	Ghana 	2.599.000 	2015[19] 	Schaetzung
+29 	Lusaka 	Sambia 	2.524.000 	2018[20] 	Schaetzung
+30 	Tunis 	Tunesien 	2.429.800 	2014[21] 	Zensus 

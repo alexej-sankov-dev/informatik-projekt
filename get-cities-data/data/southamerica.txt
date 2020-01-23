@@ -1,0 +1,15 @@
+1. 	Sao Paulo 	Brasilien 	20.883.046 	21.846.507
+2. 	Buenos Aires 	Argentinien 	15.057.273 	14.705.533
+3. 	Rio de Janeiro 	Brasilien 	13.374.275 	12.940.796
+4. 	Bogota 	Kolumbien 	10.779.376 	9.707.746
+5. 	Lima 	Peru 	10.554.712 	9.812.737
+6. 	Santiago de Chile 	Chile 	4.837.295 	N/A
+7. 	Brasalia 	Brasilien 	4.558.991 	4.168.288
+8. 	Medellin 	Kolumbien 	3.966.906 	3.735.098
+9. 	Caracas 	Venezuela 	3.000.000 	N/A
+10. 	Cali 	Kolumbien 	2.754.078 	N/A
+11. 	Salvador da Bahia 	Brasilien 	2.711.840 	N/A
+12. 	Fortaleza 	Brasilien 	2.400.000 	N/A
+13. 	Belo Horizonte 	Brasilien 	2.373.224 	N/A
+14. 	Maracaibo 	Venezuela 	2.225.000 	N/A
+15. 	Guayaquil 	Ecuador 	1.952.029 	N/A 

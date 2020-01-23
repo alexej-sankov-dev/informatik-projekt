@@ -1,0 +1,50 @@
+1 	Tokio-Yokohama 	Japan 	38.001.018
+2 	Delhi 	Indien 	25.703.168
+3 	Shanghai 	Volksrepublik China 	23.740.778
+4 	Mumbai 	Indien 	21.042.538
+5 	Peking 	Volksrepublik China 	20.383.994
+6 	Osaka-Kobe 	Japan 	20.237.645
+7 	Dhaka 	Bangladesch 	17.598.228
+8 	Karatschi 	Pakistan 	16.617.644
+9 	Kalkutta 	Indien 	14.864.919
+10 	Chongqing 	Volksrepublik China 	13.331.579
+11 	Manila 	Philippinen 	12.946.263
+12 	Guangzhou 	Volksrepublik China 	12.458.130
+13 	Tianjin 	Volksrepublik China 	11.210.329
+14 	Shenzhen 	Volksrepublik China 	10.749.473
+15 	Jakarta 	Indonesien 	10.323.142
+16 	Bengaluru 	Indien 	10.087.132
+17 	Chennai 	Indien 	9.890.427
+18 	Seoul 	Suedkorea 	9.773.746
+19 	Nagoya 	Japan 	9.406.264
+20 	Bangkok 	Thailand 	9.269.823
+21 	Hyderabad 	Indien 	8.943.523
+22 	Lahore 	Pakistan 	8.741.365
+23 	Teheran 	Iran 	8.432.196
+24 	Wuhan 	Volksrepublik China 	7.905.572
+25 	Chengdu 	Volksrepublik China 	7.555.705
+26 	Dongguan 	Volksrepublik China 	7.434.935
+27 	Nanjing 	Volksrepublik China 	7.369.157
+28 	Ahmedabad 	Indien 	7.342.850
+29 	Hongkong 	Volksrepublik China 	7.313.557
+30 	Ho-Chi-Minh-Stadt 	Vietnam 	7.297.780
+31 	Foshan 	Volksrepublik China 	7.035.945
+32 	Kuala Lumpur 	Malaysia 	6.836.911
+33 	Bagdad 	Irak 	6.642.848
+34 	Hangzhou 	Volksrepublik China 	6.390.637
+35 	Riad 	Saudi-Arabien 	6.369.710
+36 	Shenyang 	Volksrepublik China 	6.315.470
+37 	Xian 	Volksrepublik China 	6.043.700
+38 	Pune 	Indien 	5.727.530
+39 	Surat 	Indien 	5.650.011
+40 	Singapur 	Singapur 	5.618.866
+41 	Fukuoka 	Japan 	5.510.478
+42 	Suzhou (Jiangsu) 	Volksrepublik China 	5.472.033
+43 	Harbin 	Volksrepublik China 	5.457.414
+44 	Istanbul (Asiatischer Teil) 	Tuerkei 	4.957.396
+45 	Rangun 	Myanmar 	4.801.930
+46 	Ankara 	Tuerkei 	4.749.968
+47 	Kabul 	Afghanistan 	4.634.875
+48 	Qingdao 	Volksrepublik China 	4.565.549
+49 	Chittagong 	Bangladesch 	4.539.393
+50 	Dalian 	Volksrepublik China 	4.489.380 
