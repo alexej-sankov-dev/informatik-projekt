@@ -12,8 +12,11 @@ import { loadState, saveState } from './actions/localStorage'
 const persistedState = loadState();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-var store = null;
+var store = createStore(
+    reducers, composeEnhancers(applyMiddleware(reduxThunk))
+);
 
+/*
 if(persistedState) {   
     store = createStore(
         reducers,
@@ -31,7 +34,7 @@ if(persistedState) {
 store.subscribe(throttle(() => {
     saveState(store);
 }, 1000));
-
+*/
 ReactDOM.render(
     <Provider store={store}>
     <App />

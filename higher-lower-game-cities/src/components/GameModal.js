@@ -2,17 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {Link} from 'react-router-dom';
 import Modal from './Modal';
-import history from '../../history';
+import history from '../history';
+import { startNewGame } from '../actions'
 
 class GameModal extends React.Component {
     
-    
+    onClick = () => {
+        console.log('clicked')
+        this.props.startNewGame()
+    }    
 
     renderActions () {
         return (
             <React.Fragment> 
-                <Link to="/game" className="ui button">start new game</Link>
-                <Link to="/" className="ui button">home</Link>
+                <Link to="/game" className="ui button" onClick={this.onClick}>start new game</Link>
+                <Link to="/" className="ui button" onClick={this.onClick}>home</Link>
             </React.Fragment>
         );
     }
@@ -40,4 +44,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps)(GameModal);
+export default connect(mapStateToProps, { startNewGame })(GameModal);

@@ -3,6 +3,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 
 import Home from './Home';
 import Game from './Game';
+import GameModal from './GameModal'
 import history from '../history';
 
 class App extends React.Component {
@@ -14,6 +15,7 @@ class App extends React.Component {
             <Switch>
               <Route path="/" exact component={Home}/>
               <Route path="/game" exact component={Game}/>
+              <Route path="/gamemodal" exact component={GameModal}/>
             </Switch>
           </div>
         </Router>
