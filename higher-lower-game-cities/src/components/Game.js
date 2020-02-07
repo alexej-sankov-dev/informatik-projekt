@@ -63,7 +63,7 @@ class Game extends React.Component {
             <ReactCSSTransitionGroup
 	            	transitionName="city"
 	            	transitionEnterTimeout={500}
-	            	transitionLeaveTimeout={300}>
+	            	transitionLeaveTimeout={500}>
                 <div key={this.props.cities[1].id} className="game-scroller">
                     <FirstCity roundState={this.props.roundState} city={this.props.cities[0]}/>
                     <SecondCity roundState={this.props.roundState} city={this.props.cities[1]}/>
