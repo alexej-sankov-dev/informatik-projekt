@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: aqua !important;
+    background-color: black !important;
     -webkit-font-smoothing: antialiased;
     font-family: rooney-sans,sans-serif !important;
     color: white !important;
@@ -56,15 +56,6 @@ div {
       .game-scroller {
         width: 150%;
         height: 100%; } 
-}
-
-.first-city {
-    background-image: url('https://i.pinimg.com/736x/cd/39/ba/cd39bab23c930963d14dbab0f396f341.jpg');
-}
-
-
-.second-city {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg/1920px-Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg');
 }
 
 .city {
@@ -162,7 +153,7 @@ div {
     opacity: 1;
     line-height: 0.75;
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 10px !important;
 }
 @media screen and (orientation: landscape) {
     .city-population-text {
@@ -320,7 +311,7 @@ div {
     -o-transition: all .1s ease-in;
     transition: all .1s ease-in;
     background: #fff;
-    color: #000; 
+    color: #000 !important; 
 }
 .game-button:active {
     -webkit-transform: scale(0.95);
@@ -333,7 +324,7 @@ div {
     .game-button:hover {
         text-decoration: none;
         background-color: #FFFFFF;
-        color: #000000; } }
+        color: #000000 !important;} }
 
 
 .score-bar {
@@ -493,3 +484,72 @@ div {
 @media screen and (min-width: 41.25em) {
     .versus-block__text {
       font-size: 2rem; } }
+
+
+.test-animation {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0.1; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0.1; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0.1; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0.1; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0.1; }
+    to   { opacity: 1; }
+}
+
+.city-enter {
+    opacity: 0.01;
+}
+
+.city-enter.city-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.city-leave {
+    opacity: 1;
+}
+
+.city-leave.city-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.city-appear {
+    opacity: 0.01;
+}
+  
+.city-appear.city-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+
+.ui.modal>.content {
+    color:black;
+}

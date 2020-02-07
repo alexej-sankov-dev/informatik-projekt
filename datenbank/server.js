@@ -21,17 +21,17 @@ server.get("/items", (req, res) => {
 
 server.get("/2items", (req, res) => {
    var cities = {}     
-   /*
+   
    const id = Math.floor(Math.random() * data.length);
+   
+   var id2 = Math.floor(Math.random() * data.length);      //id1 muss noch =/= id2
+
+   while(id==id2) {
+      id2 = Math.floor(Math.random() * data.length);      //id1 muss noch =/= id2
+   }
+
    cities[0] = data[id]
-   //res.json(data[id]);
-
-   const id2 = Math.floor(Math.random() * data.length);      //id1 muss noch =/= id2
    cities[1] = data[id2]
-   */
-
-   cities[0] = data[0]
-   cities[1] = data[1]
    res.json(cities);
 });
 

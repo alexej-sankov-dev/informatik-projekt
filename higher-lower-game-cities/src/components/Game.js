@@ -2,10 +2,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchCities, handleGuess} from '../actions';
 import history from '../history';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-function numberWithDots(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-}
+import VersusBlock from './VersusBlock';
+import ScoreBar from './ScoreBar';
+import FirstCity from './FirstCity';
+import SecondCity from './SecondCity';
+
 
 class Game extends React.Component {
 
@@ -15,10 +18,10 @@ class Game extends React.Component {
         
         if(populationFirst<populationSecond) {
             this.props.handleGuess(true)
-            setTimeout(function(){ this.props.fetchCities() }, 2000);
+            setTimeout(() => { this.props.fetchCities() }, 2000);
         } else {
             this.props.handleGuess(false)
-            setTimeout(function(){ history.push('/gamemodal') }, 2000);
+            setTimeout(() => { history.push('/gamemodal') }, 2000);
         }
     }
 
@@ -54,113 +57,27 @@ class Game extends React.Component {
             )
         }
     }
-
-    renderScoreBar() {
-        return (
-            <div className="score-bar">
-                <div className="score-bar-score">
-                Score: {this.props.score}
-                </div>
-            </div>
-        )
-    }
-
-    renderVersusBlock() {
-        var test = null
-        if(this.props.roundState == null) {
-            test = "vs"
-        }
-        if(this.props.roundState == "true") {
-            test = <img className="versus-block-image" src="https://image.flaticon.com/icons/svg/2089/2089713.svg"/>
-        }
-        if(this.props.roundState =="false") {
-            test = <img className="versus-block-image" src="https://image.flaticon.com/icons/svg/2089/2089733.svg"/>
-        }
-        return (
-            <div>
-                <div className={`versus-block versus-block-${this.props.roundState}`}>
-                    <div className="versus-block-text">{test}</div>
-                    <div className="versus-block-overlay"></div>
-                    <div className="versus-block-icon"></div>
-                </div>
-            </div>
-        )
-    }
-
-    renderFirstCity() {
-        var population = this.props.cities[0].population
-        return(
-            <div className="city first-city">
-                <div className="city-wrapper">
-                    <div className="city-name">
-                        <p className="city-name-text">
-                            {this.props.cities[0].name}
-                        </p>
-                        <p className="city-country-text">
-                            in {this.props.cities[0].country}
-                            </p>
-                        <p>hat</p>
-
-                    </div>
-                    <div className="city-population">
-                        <p className="city-population-text">
-                            {numberWithDots(population)}
-                        </p>
-                        <p>Einwohner</p>  
-                    </div>
-                </div>
-            </div>
-        )
-    }
-
-    renderSecondCity() {
-        var hiddenClass = null
-        if(this.props.roundState == null) {
-            hiddenClass = "city-population-hidden"
-        } else {
-            hiddenClass = "city-population animation-slide-up-reveal"
-        }
-        return(
-            <div className="city second-city">
-                <div className="city-wrapper">
-                    <div className="city-name">
-                        <p className="city-name-text">
-                            {this.props.cities[1].name}
-                        </p>
-                        <p className="city-country-text">
-                           in {this.props.cities[1].country}
-                        </p>
-                        <p>hat</p>
-
-                    </div>
-                    <div className={`${hiddenClass}`}>
-                        <p className="city-population-text">
-                            {numberWithDots(this.props.cities[1].population)}
-                        </p>
-                        <p>Einwohner</p>  
-                    </div>
-                </div>
-            </div>
-
-        )
-    }
-
+    
     renderCities() {
         return (
-            <div className="game-scroller">
-                {this.renderFirstCity()}
-                {this.renderSecondCity()}
-            </div>
-
+            <ReactCSSTransitionGroup
+	            	transitionName="city"
+	            	transitionEnterTimeout={500}
+	            	transitionLeaveTimeout={300}>
+                <div key={this.props.cities[1].id} className="game-scroller">
+                    <FirstCity roundState={this.props.roundState} city={this.props.cities[0]}/>
+                    <SecondCity roundState={this.props.roundState} city={this.props.cities[1]}/>
+                </div>
+            </ReactCSSTransitionGroup>
         )
     } 
 
     render() {
         return (
-            <div className="game-container"  style = {{height:"100vh"}}>
+            <div className="game-container"  style={{height:"100vh"}}>
                {this.renderCities()}
-               {this.renderScoreBar()}
-               {this.renderVersusBlock()}
+               <ScoreBar score={this.props.score} />
+                <VersusBlock roundState={this.props.roundState}/>
                {this.renderActions()}
                
             </div>
