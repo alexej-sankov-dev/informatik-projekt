@@ -10,7 +10,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class GameModal extends React.Component {
     
     onClick = () => {
-        console.log('clicked')
         this.props.startNewGame()
     }    
 
