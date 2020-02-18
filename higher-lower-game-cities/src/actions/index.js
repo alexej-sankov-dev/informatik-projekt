@@ -19,14 +19,23 @@ export const startNewGame = () => dispatch => {
 };
 
 export const signIn = (userId) => async (dispatch) => {
-    const response = await users.post('/signin');
-    if(response.body.new) {
+    const response = await users.get(`/signIn?userId=${userId}`, userId);
+    console.log(response)
+    if(response.data.new) {
         dispatch({ type: SIGN_IN, payload: {userId, highscore: 0}});
+        console.log('is a new one')
         history.push('/userDataModal');
     } else {
-        dispatch({ type: SIGN_IN, payload: {userId, username: response.body.username, highscore: response.body.highscore}});
+        
+        dispatch({ type: SIGN_IN, payload: {userId, username: response.data.username, highscore: response.data.highscore}});
+        console.log('not a new one')
         history.push('/');
     }
+  /*  
+    dispatch({ type: SIGN_IN, payload: {userId, username: 'test', highscore: 0}});
+    history.push('/');
+  */
+    
 };
 
 export const signOut = () => {
@@ -36,9 +45,9 @@ export const signOut = () => {
 };
 
 export const setUserData = (formValues) => async (dispatch, getState) => {
-    const response = await users.post('/setUserData', {formValues, userId: getState().auth.userId});
+    const response = await users.put('/setUserData', {username: formValues.username, userId: getState().auth.userId});
     dispatch({type: SET_USER_DATA, payload: response.data});
-    history.push('/home');
+    history.push('/');
 };
 
 export const fetchLeaderboard = () => async dispatch => {
@@ -47,15 +56,19 @@ export const fetchLeaderboard = () => async dispatch => {
 }
 
 export const updateHighscore = (userId, highscore) => async (dispatch, getState) => {
-    var response = null
+    
     if(highscore > getState().auth.highscore) {
-        response = await users.patch(`/updateHighScore`, {userId, highscore});
-    }
-    var response1 = null
-    if(highscore > getState().leaderboard["length"].highscore) {
-        response1 = await leaderboard.patch(`/`, {userId, highscore});
+        var response = await users.put(`/updateHighScore`, {userId: getState().auth.userId, highscore});
+        dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response.data.highscore, leaderboard: {}}});
 
     }
-    dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response, leaderboard: response1}});
+    /*
+    var response1 = null
+    if(highscore > getState().leaderboard["length"].highscore) {
+        response1 = await leaderboard.put(`/`, {userId, highscore});
+
+    }
+    */
+    //dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response, leaderboard: response1}});
 };
 

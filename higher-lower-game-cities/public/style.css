@@ -350,6 +350,10 @@ div {
     float: right
 }
 
+.score-bar-highscore {
+    float: left;
+}
+
 .versus-block {
     position: fixed;
     border-radius: 50%;
@@ -486,12 +490,12 @@ div {
       font-size: 2rem; } }
 
 
-.test-animation {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
+.fade-animation {
+    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 4s; /* Firefox < 16 */
+        -ms-animation: fadein 4s; /* Internet Explorer */
+         -o-animation: fadein 4s; /* Opera < 12.1 */
+            animation: fadein 4s;
 }
 
 @keyframes fadein {
@@ -523,33 +527,21 @@ div {
     to   { opacity: 1; }
 }
 
-.city-enter {
-    opacity: 0.01;
-}
-
-.city-enter.city-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-}
-
-.city-leave {
-    opacity: 1;
-}
-
-.city-leave.city-leave-active {
-    opacity: 0.01;
-    transition: opacity 300ms ease-in;
-}
-
-.city-appear {
-    opacity: 0.01;
-}
-  
-.city-appear.city-appear-active {
-    opacity: 1;
-    transition: opacity .5s ease-in;
-}
-
 .ui.modal>.content {
     color:black;
 }
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }

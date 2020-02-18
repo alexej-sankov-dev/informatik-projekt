@@ -1,4 +1,5 @@
 from srcallcities import getAllCities
+
 def getUniqueCities():
         
         cities = getAllCities()
@@ -23,9 +24,29 @@ def getUniqueCities():
         
         return cities
 
+def getURLS():
+    FIN  = open("data/linksbild.txt",  "r")
+    InputData = FIN.read().split('\n')
+
+    urls = []
+    for string in InputData:
+        arr = string.split(' ')
+        urls.append(arr[1])
+
+
+
+    FIN.close()
+    return urls
+
+def addImageURL():
+    cities = getUniqueCities()
+    urls = getURLS()
+    for  i, elem in enumerate(cities):
+        elem.append(urls[i])
+
+    return cities
 
 def main():
-    print(getUniqueCities())
     return 0
 
 if __name__ == '__main__':

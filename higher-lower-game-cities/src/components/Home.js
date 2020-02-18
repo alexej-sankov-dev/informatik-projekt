@@ -4,12 +4,13 @@ import GoogleAuth from './GoogleAuth'
 
 
 class Home extends React.Component{
+    
 
     render() {
         return (
             <div className="ui menu">
                 <div className="ui right menu">
-                    GoogleAuth
+                 <GoogleAuth /> 
                 </div>
 
                Home

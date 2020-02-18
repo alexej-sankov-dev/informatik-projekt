@@ -231,7 +231,7 @@
 231,Bogota,10779376,Kolumbien,
 232,Lima,10554712,Peru,
 233,Santiago de Chile,4837295,Chile,
-234,Brasalia,4558991,Brasilien,
+234,Brasilia,4558991,Brasilien,
 235,Medellin,3966906,Kolumbien,
 236,Caracas,3000000,Venezuela,
 237,Cali,2754078,Kolumbien,

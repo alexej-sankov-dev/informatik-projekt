@@ -4,9 +4,14 @@ import {Link} from 'react-router-dom';
 import Modal from './Modal';
 import history from '../history';
 import UserForm from './UserForm'
+import { setUserData } from '../actions'
 
 class UserDataModal extends React.Component {
     
+    onSubmit = (formValues) => {
+        this.props.setUserData(formValues);
+    };
+
     renderActions () {
         return (
             <React.Fragment> 
@@ -18,7 +23,7 @@ class UserDataModal extends React.Component {
     renderContent() {
         
         return (
-            <UserForm isSignedIn={this.props.isSignedIn}/>
+            <UserForm isSignedIn={this.props.isSignedIn} onSubmit={this.onSubmit}/>
         )
     }
 
@@ -40,4 +45,4 @@ const mapStateToProps = state => {
 }
 
 
-export default connect(mapStateToProps,  null )(UserDataModal);
+export default connect(mapStateToProps,  {setUserData} )(UserDataModal);

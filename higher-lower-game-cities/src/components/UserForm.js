@@ -1,5 +1,5 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
+import {Field, reduxForm, Form} from 'redux-form';
 import users from '../apis/Users'
 import history from '../history'
 
@@ -23,6 +23,7 @@ class UserForm extends React.Component{
     }
     renderInput = ({input, label, meta}) => {
         const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
+        console.log(className)
         return (
             <div className={className}>
                 <label>{label}</label>
@@ -32,9 +33,6 @@ class UserForm extends React.Component{
         );
     };
 
-    onSubmit = (formValues) => {
-        this.props.setUserData(formValues);
-    };
 
     render() {
         /*
@@ -45,15 +43,15 @@ class UserForm extends React.Component{
         }
         */
         return (
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
+            <Form onSubmit={this.props.handleSubmit(this.props.onSubmit)} className="ui form error">
                 <Field name="username" component={this.renderInput} label="Enter Username" />
                 <button className="ui button primary">Submit</button>
-            </form>
+            </Form>
         );
     }
 }
 
-const validate = async (formValues) => {
+const validate = (formValues) => {
     const errors = {};
     if(!formValues.username) {
         errors.username = 'You must enter a username'
@@ -74,8 +72,11 @@ const validate = async (formValues) => {
     return errors;
 };
 
-export default reduxForm({
-    form: 'streamForm',
+UserForm = reduxForm({
+    form: 'userForm',
+    destroyOnUnmount: false,
     validate
-})(UserForm);
+})(UserForm)
+
+export default UserForm
 

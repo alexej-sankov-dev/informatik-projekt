@@ -4,7 +4,7 @@
 4. 	Bogota 	Kolumbien 	10.779.376 	9.707.746
 5. 	Lima 	Peru 	10.554.712 	9.812.737
 6. 	Santiago de Chile 	Chile 	4.837.295 	N/A
-7. 	Brasalia 	Brasilien 	4.558.991 	4.168.288
+7. 	Brasilia 	Brasilien 	4.558.991 	4.168.288
 8. 	Medellin 	Kolumbien 	3.966.906 	3.735.098
 9. 	Caracas 	Venezuela 	3.000.000 	N/A
 10. 	Cali 	Kolumbien 	2.754.078 	N/A

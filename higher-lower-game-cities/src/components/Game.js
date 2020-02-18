@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchCities, handleGuess} from '../actions';
+import {fetchCities, handleGuess, updateHighscore} from '../actions';
 import history from '../history';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -12,6 +12,10 @@ import SecondCity from './SecondCity';
 
 class Game extends React.Component {
 
+    componentDidUpdate() {
+        console.log(this.props.auth)
+    }
+
     onClickMore = () => {
         var populationFirst = this.props.cities[0].population 
         var populationSecond = this.props.cities[1].population
@@ -21,6 +25,7 @@ class Game extends React.Component {
             setTimeout(() => { this.props.fetchCities() }, 2000);
         } else {
             this.props.handleGuess(false)
+            this.props.updateHighscore(this.props.auth.userId, this.props.score)
             setTimeout(() => { history.push('/gamemodal') }, 2000);
         }
     }
@@ -34,6 +39,7 @@ class Game extends React.Component {
             setTimeout(() => { this.props.fetchCities() }, 2000);
         } else {
             this.props.handleGuess(false)
+            this.props.updateHighscore(this.props.auth.userId, this.props.score)
             setTimeout(function(){ history.push('/gamemodal') }, 2000);
         }
     }
@@ -59,16 +65,17 @@ class Game extends React.Component {
     }
     
     renderCities() {
+        var key1 = Math.floor(Math.random() * 10000)
+        var citiesClasses = 'game-scroller'
+        if(this.props.roundState == null) {
+            citiesClasses = 'game-scroller fade-animation'
+        }
         return (
-            <ReactCSSTransitionGroup
-	            	transitionName="city"
-	            	transitionEnterTimeout={500}
-	            	transitionLeaveTimeout={500}>
-                <div key={this.props.cities[1].id} className="game-scroller">
+            
+                <div key={key1} className={citiesClasses}>
                     <FirstCity roundState={this.props.roundState} city={this.props.cities[0]}/>
                     <SecondCity roundState={this.props.roundState} city={this.props.cities[1]}/>
                 </div>
-            </ReactCSSTransitionGroup>
         )
     } 
 
@@ -76,7 +83,7 @@ class Game extends React.Component {
         return (
             <div className="game-container"  style={{height:"100vh"}}>
                {this.renderCities()}
-               <ScoreBar score={this.props.score} />
+               <ScoreBar score={this.props.score} highscore={this.props.auth.highscore} isSignedIn={this.props.auth.isSignedIn}/>
                 <VersusBlock roundState={this.props.roundState}/>
                {this.renderActions()}
                
@@ -89,8 +96,9 @@ const mapStateToProps = (state) => {
     return {
         cities: state.game.cities,
         score: state.game.score,
-        roundState: state.game.roundState
+        roundState: state.game.roundState,
+        auth: state.auth
     }
 }
 
-export default connect(mapStateToProps, {fetchCities, handleGuess})(Game);
+export default connect(mapStateToProps, {fetchCities, handleGuess, updateHighscore})(Game);
