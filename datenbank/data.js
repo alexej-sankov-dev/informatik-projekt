@@ -103,7 +103,7 @@ module.exports = [
 	{"index": 101, "name": "Ekurhuleni", "population": 3178470, "country": "Suedafrika", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Germiston_CBD.jpg/1200px-Germiston_CBD.jpg"},
 	{"index": 102, "name": "Abuja", "population": 3095000, "country": "Nigeria", "image": "https://guardian.ng/wp-content/uploads/2017/12/Abuja.jpg"},
 	{"index": 103, "name": "Maputo", "population": 2947967, "country": "Mosambik", "image": "https://i.ytimg.com/vi/BpYFpKUvT1s/maxresdefault.jpg"},
-	{"index": 104, "name": "Algier", "population": 2947461, "country": "Algerien", "image": "https://esthers-travel-guide.com/wp-content/uploads/2017/11/algier-3.jpg"},
+	{"index": 104, "name": "Algier", "population": 2947461, "country": "Algerien", "image": "https://pix10.agoda.net/geo/city/1194/1_1194_02.jpg?s=1920x822"},
 	{"index": 105, "name": "Tshwane", "population": 2921488, "country": "Suedafrika", "image": "http://cdn.primedia.co.za/primedia-broadcasting/image/upload/v1574768234/onijwbcp8wdnnlncnlqp.jpg"},
 	{"index": 106, "name": "Port Harcourt", "population": 2873000, "country": "Nigeria", "image": "https://i.pinimg.com/originals/9b/16/ce/9b16ce0d9064ddeb6b3077024080e2d4.jpg"},
 	{"index": 107, "name": "Ouagadougou", "population": 2741000, "country": "Burkina Faso", "image": "https://www.afd.fr/sites/afd/files/styles/visuel_principal/public/2018-08-05-03-25/ville-route-renovee-amenagement-urbain-ouagadougou-burkina-faso-guebo.JPG?itok=7zKi04aI"},

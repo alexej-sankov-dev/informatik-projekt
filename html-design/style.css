@@ -1,5 +1,5 @@
 body {
-    background-color: aqua;
+    background-color: white;
     -webkit-font-smoothing: antialiased;
     font-family: rooney-sans,sans-serif;
     color: white;
@@ -348,3 +348,6 @@ div {
 @media screen and (min-width: 41.25em) {
     .versus-block__text {
       font-size: 2rem; } }
+
+
+

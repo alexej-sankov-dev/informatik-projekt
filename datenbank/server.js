@@ -3,7 +3,8 @@ var cors = require('cors')
 const server = express();
 var fs = require("fs");
 let data = require('./data');
-let userdata = require('./user');
+let userdata = require('./user1');
+let leaderdata = require('./leaderboard');
 
 server.use(cors())
 
@@ -70,46 +71,96 @@ server.get("/user/signIn", (req, res) => {
 server.put("/user/setUserData", (req, res) => {
    var username = req.body.username
    var userId = req.body.userId
-   console.log("username: "+username)
-   console.log("userId: "+userId)
    loadData()
 
   if(!userdata.hasOwnProperty(userId)) {
       res.json({"message": "user not existing with this id"})
-      console.log('error')
   } else {
       userdata[userId].username = username
       saveData(userdata)
       res.json(userdata[userId])
-      console.log('should be updated')
   }
 });
 
 server.put("/user/updateHighScore", (req, res) => {
    var highscore = req.body.highscore
    var userId = req.body.userId
-
    loadData()
-
-   userdata[userId].highscore = highscore
-
-   saveData(userdata)
-   res.json(userdata[userId]);
+   if(!userdata.hasOwnProperty(userId)) {
+      res.json({"message": "user not existing with this id"})
+  } else {
+      userdata[userId].highscore = highscore
+      saveData(userdata)
+      res.json(userdata[userId]);
+  }
 });
 
-server.get("/updateHighScore", (req, res) => {
+server.put("/leaderboard/updateHighScore", (req, res) => {
+   
    var highscore = req.body.highscore
    var userId = req.body.userId
 
-   loadData()
+   fs.readFile('./leaderboard.json', 'utf8', (err, leaderdata) => {
+      if (err) {
+          console.log("File read failed:", err)
+          return
+      }
+   })
 
-   userdata[userId].highscore = highscore
+   highscores = []
 
-   saveData(userdata)
-   res.json("data[id]");
+   for(let i=1; i<=5; i++) {
+      highscores[i] = leaderdata[i].score
+   }
+
+
+   indexPlace = null
+   for(let i=0; i<highscores.length; i++) {
+      if(highscore > highscores[i]) {
+         indexPlace=i
+         break
+      } else {
+         continue
+      }
+   }
+
+
+   if(indexPlace == null) {
+      res.json(leaderdata)
+   } else {
+
+      var newLeaderboard = {}
+      for(let i=1; i<indexPlace; i++) {
+         newLeaderboard[i] = leaderdata[i]
+      }
+
+      loadData()
+      if(!userdata.hasOwnProperty(userId)) {
+         res.json({"message": "user not existing with this id"})
+      } else {
+         newLeaderboard[indexPlace] = {"score": highscore, "username": userdata[userId].username, "userId": userdata[userId].userId} 
+
+         for(let i=indexPlace+1; i<=5; i++) {
+            newLeaderboard[i] = leaderdata[i-1]
+         }
+
+         fs.writeFile("./leaderboard.json", JSON.stringify(newLeaderboard), (err) => {
+            if (err) {
+               console.error(err);
+               return;
+            };
+      });
+      	leaderdata = newLeaderboard
+         res.json(newLeaderboard);
+      }
+   }
+   
 });
 
-
+server.get("/leaderboard", (req, res) => {
+         
+   res.json(leaderdata);
+});
 
 
 

@@ -31,10 +31,6 @@ export const signIn = (userId) => async (dispatch) => {
         console.log('not a new one')
         history.push('/');
     }
-  /*  
-    dispatch({ type: SIGN_IN, payload: {userId, username: 'test', highscore: 0}});
-    history.push('/');
-  */
     
 };
 
@@ -59,14 +55,13 @@ export const updateHighscore = (userId, highscore) => async (dispatch, getState)
     
     if(highscore > getState().auth.highscore) {
         var response = await users.put(`/updateHighScore`, {userId: getState().auth.userId, highscore});
-        dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response.data.highscore, leaderboard: {}}});
+        dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response.data.highscore}});
 
     }
     /*
     var response1 = null
     if(highscore > getState().leaderboard["length"].highscore) {
         response1 = await leaderboard.put(`/`, {userId, highscore});
-
     }
     */
     //dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response, leaderboard: response1}});
