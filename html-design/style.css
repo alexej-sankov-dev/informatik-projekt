@@ -240,7 +240,7 @@ div {
     display: inline-block;
     width: 12.5rem;
     padding: 0.625rem;
-    border-radius: 2.5rem;
+    border-radius: 0rem;    /* 2.5 before */
     margin: 0 10px 10px;
     position: relative;
     border: 0.125rem solid #FFFFFF;
@@ -308,7 +308,7 @@ div {
 .versus-block {
     position: fixed;
     
-    border-radius: 50%;
+    border-radius: 0%; /* 50% before */
     background: #FFFFFF;
     left: 50%;
     top: 50%;
