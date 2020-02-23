@@ -52,18 +52,25 @@ export const fetchLeaderboard = () => async dispatch => {
 }
 
 export const updateHighscore = (userId, highscore) => async (dispatch, getState) => {
-    
+    var payload = null
     if(highscore > getState().auth.highscore) {
         var response = await users.put(`/updateHighScore`, {userId: getState().auth.userId, highscore});
-        dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response.data.highscore}});
+        payload = {highscore: response.data.highscore};
 
     }
-    /*
+    
     var response1 = null
-    if(highscore > getState().leaderboard["length"].highscore) {
-        response1 = await leaderboard.put(`/`, {userId, highscore});
+    console.log(getState().leaderboard)
+    if(highscore > getState().leaderboard["5"].score) {
+        console.log('update leaderboard')
+        console.log('payload before: '+payload)
+        response1 = await leaderboard.put(`/updateHighScore`, {userId, highscore});
+        payload = {...payload, leaderboard: response1.data}
+        console.log(payload)
     }
-    */
-    //dispatch({type: UPDATE_HIGHSCORE, payload: {highscore: response, leaderboard: response1}});
+    if(payload != null) {
+        dispatch({type: UPDATE_HIGHSCORE, payload: payload});
+    }
+    
 };
 

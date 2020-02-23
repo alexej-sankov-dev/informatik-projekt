@@ -4,8 +4,7 @@ import {Link} from 'react-router-dom';
 import Modal from './Modal';
 import history from '../history';
 import { startNewGame } from '../actions'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
+import Leaderboard from './Leaderboard'
 
 class GameModal extends React.Component {
     
@@ -26,19 +25,14 @@ class GameModal extends React.Component {
         
         //return 'You failed. Your score was '+this.props.score;
         return (
-            <ReactCSSTransitionGroup
-	            	transitionName="city"
-	            	transitionEnterTimeout={500}
-	            	transitionLeaveTimeout={300}>
-            <div key="13">Hello this is a text</div>
-            </ReactCSSTransitionGroup>
+            <Leaderboard />
         )
     }
 
     render () {
         return (
             <Modal
-                title="Login"
+                title="You failed"
                 content={this.renderContent()}
                 actions={this.renderActions()}
                 onDismiss={() => history.push('/')}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {fetchCities, handleGuess, updateHighscore} from '../actions';
+import {fetchCities, handleGuess, updateHighscore, fetchLeaderboard} from '../actions';
 import history from '../history';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -11,10 +11,6 @@ import SecondCity from './SecondCity';
 
 
 class Game extends React.Component {
-
-    componentDidUpdate() {
-        console.log(this.props.auth)
-    }
 
     onClickMore = () => {
         var populationFirst = this.props.cities[0].population 
@@ -46,6 +42,8 @@ class Game extends React.Component {
 
     componentDidMount = () => {
         this.props.fetchCities();
+        this.props.fetchLeaderboard();
+        
     }
 
     renderActions() {
@@ -101,4 +99,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {fetchCities, handleGuess, updateHighscore})(Game);
+export default connect(mapStateToProps, {fetchCities, handleGuess, updateHighscore, fetchLeaderboard})(Game);

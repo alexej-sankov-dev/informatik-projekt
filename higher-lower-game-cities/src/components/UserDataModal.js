@@ -33,7 +33,7 @@ class UserDataModal extends React.Component {
                 title="Enter User Data"
                 content={this.renderContent()}
                 actions={this.renderActions()}
-                onDismiss={() => history.push('/')}
+                onDismiss={() => alert('enter a username')}
             />
 
         );
