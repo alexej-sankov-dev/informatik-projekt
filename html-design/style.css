@@ -350,6 +350,11 @@ div {
       font-size: 2rem; } }
 
 .logo {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    text-align: center;
     font-size: x-large;
     color: maroon;
 }
@@ -418,3 +423,15 @@ a.button {
         text-decoration: none;
         background-color: #FFFFFF;
         color: #000000; } }
+
+.background {
+    background-image: url(picture1.jpg);
+}
+
+.explanationText {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
