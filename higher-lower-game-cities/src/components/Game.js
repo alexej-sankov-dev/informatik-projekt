@@ -8,6 +8,7 @@ import VersusBlock from './VersusBlock';
 import ScoreBar from './ScoreBar';
 import FirstCity from './FirstCity';
 import SecondCity from './SecondCity';
+import GoogleAuth from './GoogleAuth';
 
 
 class Game extends React.Component {
@@ -84,7 +85,6 @@ class Game extends React.Component {
                <ScoreBar score={this.props.score} highscore={this.props.auth.highscore} isSignedIn={this.props.auth.isSignedIn}/>
                 <VersusBlock roundState={this.props.roundState}/>
                {this.renderActions()}
-               
             </div>
         );
     }

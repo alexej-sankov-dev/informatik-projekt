@@ -545,3 +545,21 @@ div {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
  }
+
+ .menu {
+     position: fixed;
+     z-index: 100;
+ }
+
+ .centeredButton {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+  }
+
+.home-background {
+    background-image: url(E:\Programming\informatik-projekt\html-design\picture1.jpg);
+    background-color: aqua !important;
+}

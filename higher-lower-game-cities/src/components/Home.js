@@ -8,16 +8,14 @@ class Home extends React.Component{
 
     render() {
         return (
-            <div className="ui menu">
-                <div className="ui right menu">
-                 <GoogleAuth /> 
+            <div className="home-background">
+                <div className="centeredButton">
+                    Higher Lower Game
+                    <br></br>
+                    <Link to="/game">
+                        <button>start game</button>
+                    </Link>
                 </div>
-
-               Home
-
-               <Link to="/game">
-                    <button>start game</button>
-                </Link>
             </div>
         );
     }

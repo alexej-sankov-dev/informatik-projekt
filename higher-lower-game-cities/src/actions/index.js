@@ -20,16 +20,12 @@ export const startNewGame = () => dispatch => {
 
 export const signIn = (userId) => async (dispatch) => {
     const response = await users.get(`/signIn?userId=${userId}`, userId);
-    console.log(response)
     if(response.data.new) {
         dispatch({ type: SIGN_IN, payload: {userId, highscore: 0}});
-        console.log('is a new one')
         history.push('/userDataModal');
     } else {
         
         dispatch({ type: SIGN_IN, payload: {userId, username: response.data.username, highscore: response.data.highscore}});
-        console.log('not a new one')
-        history.push('/');
     }
     
 };
