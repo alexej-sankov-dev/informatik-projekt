@@ -9,17 +9,16 @@ class Leaderboard extends React.Component {
         this.props.fetchLeaderboard();
     }
 
-    renderList() {
+    
+
+    renderLeaderBoard() {
         return this.props.leaderboard.map( (item, index) => {
             return (
-                <div className="item" key={index}>
-                    <i className="large middle aligned icon camera" />
-                    <div className="content">
-                        <div className="header">Platz: {index}</div>
-                        <div className="description">{item.username}</div>
-                        <div className="price">Score: {item.score}</div>
-                    </div>
-                </div>
+                <tr>
+                    <td>{index+1}</td>
+                    <td>{item.username}</td>
+                    <td className="right aligned">{item.score}</td>
+                </tr>
             );
         });
     }
@@ -27,10 +26,19 @@ class Leaderboard extends React.Component {
     render() {
         return (
             <div>
-                <h2>Leaderboard</h2>
-                <div className="ui celled list">
-                    {this.renderList()}
-                </div>
+                <h2 className="ui center aligned large header leaderboard-header">Rangliste</h2>
+                <table class="ui inverted unstackable inverted table">
+                <thead>
+                    <tr>
+                        <th className="gold-color">Rank</th>
+                        <th>Spieler</th>
+                        <th className="right aligned">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {this.renderLeaderBoard()}
+                </tbody>
+                </table> 
             </div>
         );
     }

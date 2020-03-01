@@ -7,7 +7,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font-family: rooney-sans,sans-serif !important;
     color: white !important;
-    font-size: 16px;
+    font-size: 17px !important;
     line-height: 1.3;
     height: 100%;
     position: absolute;
@@ -285,7 +285,6 @@ div {
     display: inline-block;
     width: 12.5rem;
     padding: 0.625rem;
-    border-radius: 2.5rem;
     margin: 0 10px 10px;
     position: relative;
     border: 0.125rem solid #FFFFFF;
@@ -560,6 +559,75 @@ div {
   }
 
 .home-background {
-    background-image: url(E:\Programming\informatik-projekt\html-design\picture1.jpg);
-    background-color: aqua !important;
+    background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.home-background::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: " ";
+    background-color: rgba(0,0,0,.6) !important;
+}
+
+.play-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+}
+
+.center-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+}
+
+.leaderboard {
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.header {
+    color: white !important;
+}
+
+.gold-color {
+    color: #fff989 !important;
+}
+
+}
+.ui.inverted.table th.gold-color {
+    
+    color: #fff989 !important;
+}
+
+.segment-main {
+    margin-top: 15% !important;
+    margin-left: 15% !important;
+    margin-right: 15% !important;
+    opacity: 0.9;
+}
+
+.leaderboard-header{
+    text-shadow: 1px 1px 2px #777;
+}
+
+.model-fail {
+    background: grey !important;
 }
