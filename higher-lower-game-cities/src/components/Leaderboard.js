@@ -14,7 +14,7 @@ class Leaderboard extends React.Component {
     renderLeaderBoard() {
         return this.props.leaderboard.map( (item, index) => {
             return (
-                <tr>
+                <tr key={index}>
                     <td>{index+1}</td>
                     <td>{item.username}</td>
                     <td className="right aligned">{item.score}</td>
@@ -27,7 +27,7 @@ class Leaderboard extends React.Component {
         return (
             <div>
                 <h2 className="ui center aligned large header leaderboard-header">Rangliste</h2>
-                <table class="ui inverted unstackable inverted table">
+                <table className="ui inverted unstackable inverted table">
                 <thead>
                     <tr>
                         <th className="gold-color">Rank</th>

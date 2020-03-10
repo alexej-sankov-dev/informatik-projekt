@@ -32,7 +32,7 @@ class GameModal extends React.Component {
     render () {
         return (
             <Modal
-                title="You failed"
+                title={`Game Over! Dein Score war: ${this.props.score}`}
                 content={this.renderContent()}
                 actions={this.renderActions()}
                 onDismiss={() => history.push('/')}

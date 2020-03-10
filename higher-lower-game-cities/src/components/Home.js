@@ -13,7 +13,7 @@ class Home extends React.Component{
                     <div className="ui stackable two column grid">
                         
                         <div className="ui center aligned column">
-                            <div className="ui inverted segment segment-main">
+                            <div className="segment-main">
                             
                                 <div className="row">
                                     <img className="center-logo" src="logo3-white.png"/>
@@ -22,7 +22,7 @@ class Home extends React.Component{
                                 <div className="row">
                                     <Link className="play-button" to="/game">
                                         <button className=" massive ui inverted grey labeled icon button"> 
-                                        <i class="play icon"></i>
+                                        <i className="play icon"></i>
                                         PLAY
                                         </button>
                                     </Link>
