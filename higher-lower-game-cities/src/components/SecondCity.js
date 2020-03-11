@@ -33,6 +33,9 @@ class SecondCity extends React.Component {
                         <p>Einwohner</p>  
                     </div>
                 </div>
+                <a rel="nofollow noopener noreferrer" target="_blank" className="attribution" href={`${city.image}`}>
+                    Bild: {this.props.city.name}
+                </a>
             </div>
         )
     }
