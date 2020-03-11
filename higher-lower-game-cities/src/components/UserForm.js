@@ -6,7 +6,7 @@ import history from '../history'
 class UserForm extends React.Component{
     componentDidMount() {
         /*
-        if(!this.props.isSignedIn) {
+        if(this.props.isSignedIn) {
             history.push('/')
         }
         */
@@ -23,7 +23,6 @@ class UserForm extends React.Component{
     }
     renderInput = ({input, label, meta}) => {
         const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
-        console.log(className)
         return (
             <div className={className}>
                 <label>{label}</label>
@@ -44,7 +43,7 @@ class UserForm extends React.Component{
         */
         return (
             <Form onSubmit={this.props.handleSubmit(this.props.onSubmit)} className="ui form error">
-                <Field name="username" component={this.renderInput} label="Enter Username" />
+                <Field name="username" component={this.renderInput} label="Username" />
                 <button className="ui button primary">Submit</button>
             </Form>
         );
@@ -54,19 +53,19 @@ class UserForm extends React.Component{
 const validate = (formValues) => {
     const errors = {};
     if(!formValues.username) {
-        errors.username = 'You must enter a username'
+        errors.username = 'Du musst einen Usernamen eingeben'
+    } else {
+        if(formValues.username.length < 5) {
+            errors.username = 'Username musst mindestens 5 Zeichen haben'
+        }
     }
     /*
-    if(formValues.username < 5) {
-        errors.username = 'Username must have at least 5 charcters'
-    }
-    
-    var usernameCheck = await users.post('/checkUsername', formValues.username) 
-    if(!usernameCheck.body.check) {
+    var usernameCheck = await users.post('/checkUsername', {username: formValues.username}) 
+    console.log(usernameCheck.data)
+    if(usernameCheck.data.check) {
         errors.username = 'Username already exists'
     }
     */
-
 
 
     return errors;

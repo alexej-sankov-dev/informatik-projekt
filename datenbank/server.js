@@ -82,6 +82,23 @@ server.put("/user/setUserData", (req, res) => {
   }
 });
 
+server.post("/user/checkUsername", (req, res) => {
+   var username = req.body.username
+   loadData()
+   var allUsernames = []
+   for(var key in userdata) {
+      allUsernames.push(userdata[key].username)
+   }
+
+   console.log(allUsernames)
+   console.log(username)
+   if(allUsernames.includes(username)) {
+      res.json({check: true})
+   } else {
+      res.json({check: false})
+   }
+});
+
 server.put("/user/updateHighScore", (req, res) => {
    var highscore = req.body.highscore
    var userId = req.body.userId

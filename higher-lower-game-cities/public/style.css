@@ -345,7 +345,6 @@ div {
       bottom: 24px;
       font-size: 1.5rem;
       padding: 0 24px; } }
-
 .score-bar-score {
     float: right
 }
@@ -458,18 +457,21 @@ div {
             animation: pop-in 0.3s cubic-bezier(0.24, -0.17, 0.45, 1.99) 0.5s; 
 }
   
-@media screen and (min-width: 28.75em) {
+@media screen and (min-width: 20.75em) {
     .versus-block {
       height: 3.4375rem;
-      width: 3.4375rem; } }
+      width: 3.4375rem; } 
+}
 @media screen and (min-width: 41.25em) {
     .versus-block {
       height: 3.75rem;
-      width: 3.75rem; } }
+      width: 3.75rem; } 
+}
 @media screen and (min-width: 63.688em) {
     .versus-block {
       height: 6.25rem;
-      width: 6.25rem; } }
+      width: 6.25rem; } 
+}
 
 
 .versus-block-text {
@@ -594,7 +596,7 @@ div {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 100%;
 
 }
 
@@ -604,17 +606,12 @@ div {
     margin-right: 15%;
 }
 
-.header {
-    color: white !important;
-}
 
 .gold-color {
     color: #fff989 !important;
 }
 
-}
 .ui.inverted.table th.gold-color {
-    
     color: #fff989 !important;
 }
 
@@ -631,4 +628,17 @@ div {
 
 .model-fail {
     background: grey !important;
+}
+
+label {
+    color:white !important;
+}
+
+.ui.error.message {
+    background-color: red !important;
+    
+}
+
+.ui.error.message .header {
+    color: #FFFFFF !important;
 }

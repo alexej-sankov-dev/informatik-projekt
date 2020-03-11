@@ -15,7 +15,6 @@ class UserDataModal extends React.Component {
     renderActions () {
         return (
             <React.Fragment> 
-                <Link to="/" className="ui button" onClick={this.onClick}>home</Link>
             </React.Fragment>
         );
     }
@@ -30,10 +29,10 @@ class UserDataModal extends React.Component {
     render () {
         return (
             <Modal
-                title="Enter User Data"
+                title="Gib dein Username ein: "
                 content={this.renderContent()}
                 actions={this.renderActions()}
-                onDismiss={() => alert('enter a username')}
+                onDismiss={() => (null)}
             />
 
         );
