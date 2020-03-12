@@ -15,8 +15,8 @@ class GameModal extends React.Component {
     renderActions () {
         return (
             <React.Fragment> 
-                <Link to="/game" className="ui button" onClick={this.onClick}>start new game</Link>
-                <Link to="/" className="ui button" onClick={this.onClick}>home</Link>
+                <Link to="/game" className="ui button" onClick={this.onClick}>Neues Spiel</Link>
+                <Link to="/" className="ui button" onClick={this.onClick}>Home</Link>
             </React.Fragment>
         );
     }

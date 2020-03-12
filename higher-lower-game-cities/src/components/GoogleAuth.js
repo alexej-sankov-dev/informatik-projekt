@@ -7,7 +7,7 @@ class GoogleAuth extends React.Component {
     componentDidMount() {
         window.gapi.load('client:auth2', () => {
             window.gapi.client.init({
-                clientId: '506242947952-fmm1ktfo4pcafceqdom016emk44887jm.apps.googleusercontent.com',
+                clientId: '506242947952-0kh2f3dg0b4pnd6oujj52f00i5m82g60.apps.googleusercontent.com',
                 scope: 'email'
             }).then(() =>{
                 this.auth = window.gapi.auth2.getAuthInstance();
@@ -41,14 +41,14 @@ class GoogleAuth extends React.Component {
             return (
                 <button onClick={this.onSignOutClick} className="ui red google button">
                     <i className="google icon" />
-                    Sign Out
+                    Abmelden
                 </button>
             );
         } else {
             return (
                 <button onClick={this.onSignInClick} className="ui red google button">
                     <i className="google icon" />
-                    Sign In with Google
+                    Mit Google anmelden
                 </button>
             );
         }

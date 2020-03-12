@@ -43,8 +43,8 @@ class UserForm extends React.Component{
         */
         return (
             <Form onSubmit={this.props.handleSubmit(this.props.onSubmit)} className="ui form error">
-                <Field name="username" component={this.renderInput} label="Username" />
-                <button className="ui button primary">Submit</button>
+                <Field name="username" component={this.renderInput} label="Nutzername" />
+                <button className="ui button primary">Speichern</button>
             </Form>
         );
     }
@@ -53,10 +53,10 @@ class UserForm extends React.Component{
 const validate = (formValues) => {
     const errors = {};
     if(!formValues.username) {
-        errors.username = 'Du musst einen Usernamen eingeben'
+        errors.username = 'Du musst einen Nutzernamen eingeben'
     } else {
         if(formValues.username.length < 5) {
-            errors.username = 'Username musst mindestens 5 Zeichen haben'
+            errors.username = 'Nutzername musst mindestens 5 Zeichen haben'
         }
     }
     /*

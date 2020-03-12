@@ -149,7 +149,7 @@ div {
 .city-population-text {
     font-size: 33px;
     font-weight: bold;
-    color: #fff989 !important;
+    color: #fdc14f !important;
     opacity: 1;
     line-height: 0.75;
     margin-bottom: 10px;
@@ -230,7 +230,7 @@ div {
 .game-actions-button {
     padding-right: 3.125rem;
     margin: 0 auto 10px;
-    color: #fff989 !important;
+    color: #fdc14f !important;
     display: block;
     font-size: 16px;
 }
@@ -351,6 +351,7 @@ div {
 
 .score-bar-highscore {
     float: left;
+    margin-left: 1%;
 }
 
 .versus-block {
@@ -613,11 +614,11 @@ div {
 
 
 .gold-color {
-    color: #fff989 !important;
+    color: #fdc14f !important;
 }
 
 .ui.inverted.table th.gold-color {
-    color: #fff989 !important;
+    color: #fdc14f !important;
 }
 
 .segment-main {
@@ -647,4 +648,16 @@ label {
 
 .ui.error.message .header {
     color: #FFFFFF !important;
+}
+
+.credits-button {
+    margin-top: 5% !important;
+}
+
+.segment-credits {
+    background-color: black !important;
+}
+
+.ui.image.label {
+    font-size: 20px;
 }

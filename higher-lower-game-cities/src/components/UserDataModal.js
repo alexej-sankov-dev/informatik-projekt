@@ -29,7 +29,7 @@ class UserDataModal extends React.Component {
     render () {
         return (
             <Modal
-                title="Gib dein Username ein: "
+                title="Gib dein Nutzernamen ein: "
                 content={this.renderContent()}
                 actions={this.renderActions()}
                 onDismiss={() => (null)}
