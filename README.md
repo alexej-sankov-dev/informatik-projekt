@@ -1,5 +1,4 @@
-# informatik-projekt
-
+# CITYCOUNT
 
 - Game where you can guess which of two cities has the higher population -
   (inspired by http://www.higherlowergame.com/)
