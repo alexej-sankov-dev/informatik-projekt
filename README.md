@@ -5,8 +5,9 @@
 
 Directories:
 - higher-lower-game-cities: Main React.js & Redux.js application with OAuth implementation
-- datenbank - Express.js Database
+- datenbank: Express.js Database
 - get-cities-data: scripts which where used to parse the data in a unique format
+- screenshots-app: Screenshots of main sites
 
 ## Screenshots
 
