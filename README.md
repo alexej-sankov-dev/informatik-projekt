@@ -1,12 +1,12 @@
 # CITYCOUNT
 
- Game where you can guess which of two cities has the higher population 
+ Game where you have to guess which of two cities has the higher population 
   (inspired by http://www.higherlowergame.com/)
 
 Directories:
 - higher-lower-game-cities: Main React.js & Redux.js application with OAuth implementation
 - datenbank: Express.js Database
-- get-cities-data: scripts which where used to parse the data in a unique format
+- get-cities-data: scripts which were used to parse the data in a unique format
 - screenshots-app: screenshots of main sites
 
 ## Screenshots
